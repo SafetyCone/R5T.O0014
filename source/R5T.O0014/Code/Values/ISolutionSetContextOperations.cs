@@ -24,13 +24,13 @@ namespace R5T.O0014
             bool isPrivate,
             out BlazorClientWithWebServerCreationOutput creationResult)
         {
-            var creationResult_Internal = new BlazorClientWithWebServerCreationOutput();
-
-            creationResult = creationResult_Internal;
-            
             var solutionSpecification = Instances.SolutionSpecificationGenerationOperations.Get_WebBlazorClientAndServerSolutionSpecification(
                 libraryName,
                 isPrivate);
+
+            var creationResult_Internal = new BlazorClientWithWebServerCreationOutput();
+
+            creationResult = creationResult_Internal;
 
             return solutionSetContext =>
             {
@@ -41,7 +41,9 @@ namespace R5T.O0014
                         repositoryUrl,
                         solutionSpecification.SolutionName,
                         solutionSpecification.BlazorClientProjectSpecification,
-                        solutionSpecification.ServerProjectSpecification));
+                        solutionSpecification.ServerProjectSpecification
+                    )
+                );
             };
         }
     }
