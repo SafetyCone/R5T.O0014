@@ -13,6 +13,7 @@
     <RepositoryUrl>https://github.com/SafetyCone/R5T.O0014.git</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.L0045\source\R5T.L0045.F001\R5T.L0045.F001.csproj" />
     <ProjectReference Include="..\..\..\R5T.O0015\source\R5T.O0015\R5T.O0015.csproj" />
     <ProjectReference Include="..\..\..\R5T.O0013\source\R5T.O0013\R5T.O0013.csproj" />
   </ItemGroup>
